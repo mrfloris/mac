@@ -9,7 +9,7 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 2nd, 2023.
-- Version 0.2.1, build 020.
+- Version 0.2.1, build 021.
 
 ## How does this work?
 
@@ -100,7 +100,7 @@ About iTerm2, it's a great replacement for the default macOS Terminal.app, I hav
 
 ## Dock
 
-- I don't use the Dock really, I auto hide the dock, and I have it vertically on the left. I use Alfred to and Finder to do most things. 
+- I don't use the Dock really, I auto hide the Dock, and I have it vertically on the left. I use Alfred to and Finder to do most things. It's also recommended to just remove the tools you really won't be using daily. And to start dragging some opened tools that you do use daily into the Dock. 
 
 ## TODO
 
