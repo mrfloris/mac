@@ -8,4 +8,6 @@ insomnia
 imagemagick
 ffmpeg
 alt
+stats
+itsycal
 keepingyouawake
