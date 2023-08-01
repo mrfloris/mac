@@ -11,7 +11,7 @@ My current system is a 2020 Apple Mac Mini M1 with a 1TB Nvme SSD, 16GB RAM, and
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023. 
-- Version 0.1.2 (prototype), build 008.
+- Version 0.1.3 (prototype), build 009.
 
 ## How does this work?
 
@@ -92,10 +92,7 @@ TODO: maybe check if some can be brew installed, i never checked)
 
 ## Java
 
-- Java 20.0.2 via Oracle
-TODO: new java.md page 
-`https://download.oracle.com/java/20/latest/jdk-20_macos-aarch64_bin.tar.gz`
-`/Library/Java/JavaVirtualMachines`
+- [Java 20.0.2 via Oracle](/java])
 
 ## Games
 
