@@ -11,7 +11,7 @@ My current system is an [Apple Mac Mini M1 from 2020](https://everymac.com/syste
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023. 
-- Version 0.1.3 (prototype), build 010.
+- Version 0.2.0, build 011.
 
 ## How does this work?
 
@@ -67,28 +67,27 @@ About iTerm2, it's a great replacement for the default macOS Terminal.app, I hav
 ## Apps
 
 TODO: sort from high to lower priority (defn, using daily, vs, not super needed)
-TODO: add urls
 TODO: maybe check if some can be brew installed, i never checked)
 
-- Discord (community)
-- Sublime Text 4 (daily document editor)
-- Sublime Merge  (quick non-intellij git stuff)
-- IntelliJ IDEA CE (project git for java stuff)
-- IINA (media player)
-- OBS (twitch streamer)
-- DaVinci Resolve (video editor)
-- Logic Pro (audio editor)
-- XCode (swift code editor)
-- 1Password (password management)
-- Affinity Photo / Publishing package (photo editing, and more)
-- Bartender 4 (top menu bar manager)
-- Blackmagic Disk Speed Test (handy tool to speed test drives)
-- Notion (second brain)
-- OnyX (nitpick macOS)
-- Plex Media Server (media server for tv)
-- Screenflick (screen recorder)
-- Transmit (sftp)
-- Visual Studio Code (for my other projects that aren't java)
+- [Discord](https://discord.com/) (community)
+- [Sublime Text 4](https://www.sublimetext.com/) (daily document editor)
+- [Sublime Merge](https://www.sublimemerge.com/) (quick non-IntelliJ git stuff)
+- [IntelliJ IDEA CE](https://www.jetbrains.com/idea/) (project git for Java stuff)
+- [IINA](https://iina.io/) (media player)
+- [OBS](https://obsproject.com/) (Twitch streamer)
+- [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve/) (video editor)
+- [Logic Pro](https://www.apple.com/logic-pro/) (audio editor)
+- [Xcode](https://developer.apple.com/xcode/) (Swift code editor)
+- [1Password](https://1password.com/) (password management)
+- [Affinity Photo / Publishing package](https://affinity.serif.com/) (photo editing, and more)
+- [Bartender 4](https://www.macbartender.com/) (top menu bar manager)
+- [Blackmagic Disk Speed Test](https://www.blackmagicdesign.com/products/blackmagicdiskspeedtest/) (handy tool to speed test drives)
+- [Notion](https://www.notion.so/) (second brain)
+- [OnyX](https://www.titanium-software.fr/en/onyx.html) (nitpick macOS)
+- [Plex Media Server](https://www.plex.tv/) (media server for TV)
+- [Screenflick](https://www.araelium.com/screenflick/) (screen recorder)
+- [Transmit](https://panic.com/transmit/) (SFTP)
+- [Visual Studio Code](https://code.visualstudio.com/) (for my other projects that aren't Java)
 
 ## Java
 
