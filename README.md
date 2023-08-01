@@ -107,6 +107,7 @@ TODO: maybe check if some can be brew installed, I never checked)
 
 - nodejs
 - docker
+- tmux info
 - handy links like shell checker and yaml compliance checker, chatgpt, code beaitufier 
 
 ---
