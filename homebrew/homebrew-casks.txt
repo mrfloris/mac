@@ -1,0 +1,11 @@
+alfred
+iterm2
+git
+keka
+app
+rectangle
+insomnia
+imagemagick
+ffmpeg
+alt
+keepingyouawake

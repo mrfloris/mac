@@ -11,7 +11,7 @@ My current system is a 2020 Apple Mac Mini M1 with a 1TB Nvme SSD, 16GB RAM, and
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023. 
-- Version 0.1.1 (concept), build 006.
+- Version 0.1.2 (concept), build 007.
 
 ## How does this work?
 
@@ -48,12 +48,10 @@ Once Homebrew is installed, we have access to accounts through 1Password again, 
 
 A package, or "cask" in Homebrew is easy to manage, you can quickly install and remove any cask. 
 
-TODO:
-If I don't forget later, I will make a cask.txt file that helps you on-line install them. 
-`xargs brew install < homebrew-casks.txt` or something like that (will have to check)
+I have made a [homebrew-casks.txt](/homebrew) file that helps you on-line install them.
 
 TODO:
-And if I don't forget, I will also write a documentat about my 'terminal' setup with things like 'oh my shell', etc. (https://ohmyz.sh/)
+And if I don't forget, I will also write a document about my 'terminal' setup with things like 'oh my shell', etc. (https://ohmyz.sh/)
 
 - `brew install alfred` (macOS spotlight (and dock..) replacement)
 - `brew install iterm2` (Terminal.app replacement: iTerm2)
