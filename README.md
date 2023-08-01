@@ -9,7 +9,7 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023.
-- Version 0.2.1, build 013.
+- Version 0.2.1, build 014.
 
 ## How does this work?
 
@@ -62,6 +62,8 @@ About iTerm2, it's a great replacement for the default macOS Terminal.app, I hav
 - `brew install imagemagick` (used for cli image editing)
 - `brew install ffmpeg` (used for cli video editing)
 - `brew install alt-tab` (macOS cmd-tab alternative)
+- `brew install stats` (menubar system stats)
+- `brew install itsycal` (menubar calendar)
 - `brew install keepingyouawake` (give some caffeine to your mac)
 
 ## Apps
@@ -96,6 +98,12 @@ TODO: maybe check if some can be brew installed, I never checked)
 ## Games
 
 - Minecraft (Java edition)
+
+## Dock
+
+- I don't use the Dock really, I auto hide the dock, and I have it vertically on the left. I use Alfred to and Finder to do most things. 
+
+--- 
 
 [homebrew-url]: https://brew.sh/
 [discord-url]: https://discord.com/
