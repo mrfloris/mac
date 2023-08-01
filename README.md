@@ -9,7 +9,7 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 2nd, 2023.
-- Version 0.2.1, build 017.
+- Version 0.2.1, build 018.
 
 ## How does this work?
 
@@ -112,6 +112,58 @@ TODO: maybe check if some can be brew installed, I never checked)
 - steam (zrips helped me remind me)
 - ? your suggestions ?
 - mikey's dotfiles https://github.com/madmikeyb/dotfiles
+
+- the456gamer contributions:
+
+i had some time to kill, so i found the cask/formalae versions for the apps not on there
+```
+brew install --cask alfred
+brew install --cask iterm2
+brew install git
+brew install --cask keka
+brew install --cask app-cleaner
+brew install --cask rectangle
+brew install --cask insomnia
+brew install imagemagick
+brew install ffmpeg
+brew install --cask alt-tab
+brew install --cask stats
+brew install --cask itsycal
+brew install --cask keepingyouawake
+
+brew install --cask discord
+brew install --cask sublime-text
+brew install --cask sublime-merge
+brew install --cask jetbrains-toolbox
+brew install --cask iina
+brew install --cask obs
+brew install --cask 1password
+brew install --cask 1password-cli
+brew install --cask affinity-photo
+brew install --cask affinity-publisher
+brew install --cask bartender
+brew install --cask notion
+brew install --cask onyx
+brew install --cask plex-media-server
+brew install --cask screenflick
+brew install --cask transmit
+brew install --cask visual-studio-code
+brew install --cask minecraft
+brew install --cask docker # DOCKER DESKTOP OR
+brew install docker        # DOCKER OSS
+brew install --cask oracle-jdk # "oracle JDK 20.0.2" OR (probably)
+brew install openjdk@<ver> # java open source versions, ver = 20,17,11,8 https://medium.com/@manvendrapsingh/installing-many-jdk-versions-on-macos-dfc177bc8c2b
+
+brew install tmux
+```
+the only 4 i couldnt find were
+<https://www.blackmagicdesign.com/products/davinciresolve/>
+<https://www.apple.com/logic-pro/>
+<https://developer.apple.com/xcode/>
+<https://apps.apple.com/gb/app/blackmagic-disk-speed-test/id425264550?mt=12>
+
+I will have to review all this ^ when i have time. but now i at least have this.
+
 ---
 
 [homebrew-url]: https://brew.sh/
