@@ -11,7 +11,7 @@ My current system is a 2020 Apple Mac Mini M1 with a 1TB Nvme SSD, 16GB RAM, and
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023. 
-- Version 0.1.2 (concept), build 007.
+- Version 0.1.2 (prototype), build 008.
 
 ## How does this work?
 
@@ -50,8 +50,7 @@ A package, or "cask" in Homebrew is easy to manage, you can quickly install and 
 
 I have made a [homebrew-casks.txt](/homebrew) file that helps you on-line install them.
 
-TODO:
-And if I don't forget, I will also write a document about my 'terminal' setup with things like 'oh my shell', etc. (https://ohmyz.sh/)
+About iTerm2, it's a great replacement for the default macOS Terminal.app, I have a [separate page](/terminal) about it.
 
 - `brew install alfred` (macOS spotlight (and dock..) replacement)
 - `brew install iterm2` (Terminal.app replacement: iTerm2)
