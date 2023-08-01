@@ -1,5 +1,4 @@
-# mac
-My Mac (dev) setup
+# My Mac (dev) Setup
 
 Once in a while, I get questions about how I set up my (new) Apple Mac system. This repository will allow me to start collecting that information and keep it up to date, and to point those who have these questions to it. It also helps me learn through contributions/suggestions by others. Feel free to clone and use this for yourself, if you find it handy, or clone and PR and make some useful contributions to this little project.
 
@@ -12,15 +11,17 @@ My current system is a 2020 Apple Mac Mini M1 with a 1TB Nvme SSD, 16GB RAM, and
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023. 
-- Version 0.0.3 (concept), build 004.
+- Version 0.1.0 (concept), build 005.
 
 ## How does this work?
 
-Before you go through my list, I want to clarify that this is not a step-by-step guide. Rather, it is a collection of my preferences based on my interests, which include Minecraft server management, HTML/CSS, markdown document writing, documentation creation, and participation in existing projects. I am not a professional in any of these areas, but I find that the programs and tools I install make my daily usage of the Mac system more enjoyable and efficient.
+Before you go through my list, I want to clarify that this is not a step-by-step guide. Rather, it is a collection of my preferences based on my interests, which include Minecraft server management, HTML/CSS, markdown document writing, youtube watching and making, video editing, guitar/audio creation, documentation creation, and participation in existing projects. I am not a professional in any of these areas, but I find that the programs and tools I install make my daily usage of the Mac system more enjoyable and efficient.
 
 ## Contributions / Credit
 
 I want to give credit to those who have inspired me to create this list and to those who have contributed to it. Any clone or pull request contributions will be acknowledged and included here.
+
+---
 
 ## Prerequisites 
 
@@ -52,7 +53,7 @@ If I don't forget later, I will make a cask.txt file that helps you on-line inst
 `xargs brew install < homebrew-casks.txt` or something like that (will have to check)
 
 TODO:
-And if I don't forget, I will also write a document about my 'terminal' setup with things like 'oh my shell', etc. (https://ohmyz.sh/)
+And if I don't forget, I will also write a documentat about my 'terminal' setup with things like 'oh my shell', etc. (https://ohmyz.sh/)
 
 - `brew install alfred` (macOS spotlight (and dock..) replacement)
 - `brew install iterm2` (Terminal.app replacement: iTerm2)
@@ -65,3 +66,39 @@ And if I don't forget, I will also write a document about my 'terminal' setup wi
 - `brew install ffmpeg` (used for cli video editing)
 - `brew install alt-tab` (macOS cmd-tab alternative)
 - `brew install keepingyouawake` (give some caffeine to your mac)
+
+## Apps
+
+TODO: sort from high to lower priority (defn, using daily, vs, not super needed)
+
+- Discord 
+- Sublime Text 4
+- Sublime Merge 
+- IntelliJ IDEA CE
+- IINA
+- OBS
+- DaVinci Resolve
+- Logic Pro
+- XCode
+- 1Password
+- Affinity Photo / Publishing package
+- Bartender 4
+- Blackmagic Disk Speed Test
+- Notion
+- OnyX
+- Plex Media Server
+- SABnzbd
+- Screenflick
+- Transmit
+- Visual Studio Code
+
+## Java
+
+- Java 20.0.2 via Oracle
+TODO: new java.md page 
+`https://download.oracle.com/java/20/latest/jdk-20_macos-aarch64_bin.tar.gz`
+`/Library/Java/JavaVirtualMachines`
+
+## Games
+
+- Minecraft (java edition)
