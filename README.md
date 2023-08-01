@@ -11,7 +11,7 @@ My current system is a 2020 Apple Mac Mini M1 with a 1TB Nvme SSD, 16GB RAM, and
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023. 
-- Version 0.1.0 (concept), build 005.
+- Version 0.1.1 (concept), build 006.
 
 ## How does this work?
 
@@ -70,27 +70,28 @@ And if I don't forget, I will also write a documentat about my 'terminal' setup 
 ## Apps
 
 TODO: sort from high to lower priority (defn, using daily, vs, not super needed)
+TODO: add urls
+TODO: maybe check if some can be brew installed, i never checked)
 
-- Discord 
-- Sublime Text 4
-- Sublime Merge 
-- IntelliJ IDEA CE
-- IINA
-- OBS
-- DaVinci Resolve
-- Logic Pro
-- XCode
-- 1Password
-- Affinity Photo / Publishing package
-- Bartender 4
-- Blackmagic Disk Speed Test
-- Notion
-- OnyX
-- Plex Media Server
-- SABnzbd
-- Screenflick
-- Transmit
-- Visual Studio Code
+- Discord (community)
+- Sublime Text 4 (daily document editor)
+- Sublime Merge  (quick non-intellij git stuff)
+- IntelliJ IDEA CE (project git for java stuff)
+- IINA (media player)
+- OBS (twitch streamer)
+- DaVinci Resolve (video editor)
+- Logic Pro (audio editor)
+- XCode (swift code editor)
+- 1Password (password management)
+- Affinity Photo / Publishing package (photo editing, and more)
+- Bartender 4 (top menu bar manager)
+- Blackmagic Disk Speed Test (handy tool to speed test drives)
+- Notion (second brain)
+- OnyX (nitpick macOS)
+- Plex Media Server (media server for tv)
+- Screenflick (screen recorder)
+- Transmit (sftp)
+- Visual Studio Code (for my other projects that aren't java)
 
 ## Java
 
