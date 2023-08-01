@@ -11,7 +11,7 @@ My current system is an [Apple Mac Mini M1 from 2020](https://everymac.com/syste
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023. 
-- Version 0.2.0, build 011.
+- Version 0.2.0, build 012.
 
 ## How does this work?
 
@@ -85,7 +85,7 @@ TODO: maybe check if some can be brew installed, i never checked)
 - [Notion](https://www.notion.so/) (second brain)
 - [OnyX](https://www.titanium-software.fr/en/onyx.html) (nitpick macOS)
 - [Plex Media Server](https://www.plex.tv/) (media server for TV)
-- [Screenflick](https://www.araelium.com/screenflick/) (screen recorder)
+- [Screenflick](https://www.araelium.com/screenflick-mac-screen-recorder) (screen recorder)
 - [Transmit](https://panic.com/transmit/) (SFTP)
 - [Visual Studio Code](https://code.visualstudio.com/) (for my other projects that aren't Java)
 
