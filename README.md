@@ -9,7 +9,7 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 2nd, 2023.
-- Version 0.2.1, build 019.
+- Version 0.2.1, build 020.
 
 ## How does this work?
 
@@ -18,6 +18,8 @@ Before you go through my list, I want to clarify that this is not a step-by-step
 ## Contributions / Credit
 
 I want to give credit to those who have inspired me to create this list and to those who have contributed to it. Any clone or pull request contributions will be acknowledged and included here.
+
+Thank you @the456gamer for your contributions!
 
 ---
 
@@ -67,9 +69,6 @@ About iTerm2, it's a great replacement for the default macOS Terminal.app, I hav
 - `brew install keepingyouawake` (give some caffeine to your mac)
 
 ## Apps
-
-TODO: sort from high to lower priority (defn, using daily, vs, not super needed)
-TODO: maybe check if some can be brew installed, I never checked)
 
 - [Discord][discord-url] (community)
 - [Sublime Text 4][sublime-text-url] (daily document editor)
@@ -163,6 +162,10 @@ the only 4 i couldnt find were
 <https://apps.apple.com/gb/app/blackmagic-disk-speed-test/id425264550?mt=12>
 
 I will have to review all this ^ when i have time. but now i at least have this.
+
+- TODO: sort the apps list from high to lower priority (defn, using daily, vs, not super needed)
+- TODO: maybe check if some apps can be brew installed, I never checked, update: the456 checked, see above)
+
 
 ---
 
