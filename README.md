@@ -103,14 +103,13 @@ TODO: maybe check if some can be brew installed, I never checked)
 
 - I don't use the Dock really, I auto hide the dock, and I have it vertically on the left. I use Alfred to and Finder to do most things. 
 
---- 
-
 ## TODO
 
 - nodejs
 - docker
 - handy links like shell checker and yaml compliance checker, chatgpt, code beaitufier 
 
+---
 
 [homebrew-url]: https://brew.sh/
 [discord-url]: https://discord.com/
