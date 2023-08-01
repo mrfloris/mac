@@ -9,7 +9,7 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 1st, 2023.
-- Version 0.2.1, build 014.
+- Version 0.2.1, build 015.
 
 ## How does this work?
 
@@ -104,6 +104,13 @@ TODO: maybe check if some can be brew installed, I never checked)
 - I don't use the Dock really, I auto hide the dock, and I have it vertically on the left. I use Alfred to and Finder to do most things. 
 
 --- 
+
+## TODO
+
+- nodejs
+- docker
+- handy links like shell checker and yaml compliance checker, chatgpt, code beaitufier 
+
 
 [homebrew-url]: https://brew.sh/
 [discord-url]: https://discord.com/
