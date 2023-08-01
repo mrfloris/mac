@@ -8,8 +8,8 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 
 ## Latest Update
 
-- This repository's latest update is a snapshot of August 1st, 2023.
-- Version 0.2.1, build 015.
+- This repository's latest update is a snapshot of August 2nd, 2023.
+- Version 0.2.1, build 016.
 
 ## How does this work?
 
@@ -109,7 +109,8 @@ TODO: maybe check if some can be brew installed, I never checked)
 - docker
 - tmux info
 - handy links like shell checker and yaml compliance checker, chatgpt, code beaitufier 
-
+- steam (zrips helped me remind me)
+- ? your suggestions ?
 ---
 
 [homebrew-url]: https://brew.sh/
