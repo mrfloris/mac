@@ -8,8 +8,8 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 
 ## Latest Update
 
-- This repository's latest update is a snapshot of August 2nd, 2023.
-- Version 0.2.1, build 021.
+- This repository's latest update is a snapshot of August 20th, 2023.
+- Version 0.2.1, build 022.
 
 ## How does this work?
 
@@ -41,7 +41,6 @@ I use Safari to check things without being logged in, I use Chrome as my main br
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-
 Homebrew is the package manager that is just super handy to quickly get a bunch of stuff installed and updated. It helps you make your Mac feel a bit more Linux-ey, if that makes sense.
 
 Once Homebrew is installed, we have access to accounts through 1Password again; it's time to start tweaking the system.
@@ -96,25 +95,25 @@ About iTerm2, it's a great replacement for the default macOS Terminal.app, I hav
 
 ## Games
 
-- Minecraft (Java edition)
+- Minecraft (Launcher for Java edition).
 
 ## Dock
 
-- I don't use the Dock really, I auto hide the Dock, and I have it vertically on the left. I use Alfred to and Finder to do most things. It's also recommended to just remove the tools you really won't be using daily. And to start dragging some opened tools that you do use daily into the Dock. 
+- I don't use the Dock much. I auto-hide the Dock, and I have it vertically on the left. I use Alfred and Finder to do most things. It's also recommended to just remove the tools you really won't be using daily. And to start dragging some opened tools that you do use daily into the Dock. 
 
 ## TODO
 
 - nodejs
 - docker
 - tmux info
-- handy links like shell checker and yaml compliance checker, chatgpt, code beaitufier 
-- steam (zrips helped me remind me)
-- ? your suggestions ?
-- mikey's dotfiles https://github.com/madmikeyb/dotfiles
+- handy links like shell checker and YAML compliance checker, chatgpt, code beautifier 
+- steam (Zrips helped me remind me)
+- ? your suggestions?
+- Mikey's dotfiles https://github.com/madmikeyb/dotfiles
 
 - the456gamer contributions:
 
-i had some time to kill, so i found the cask/formalae versions for the apps not on there
+I had some time to kill, so I found the cask/formulae versions for the apps not on there
 ```
 brew install --cask alfred
 brew install --cask iterm2
@@ -155,13 +154,13 @@ brew install openjdk@<ver> # java open source versions, ver = 20,17,11,8 https:/
 
 brew install tmux
 ```
-the only 4 i couldnt find were
+the only 4 I was unable to find were
 <https://www.blackmagicdesign.com/products/davinciresolve/>
 <https://www.apple.com/logic-pro/>
 <https://developer.apple.com/xcode/>
 <https://apps.apple.com/gb/app/blackmagic-disk-speed-test/id425264550?mt=12>
 
-I will have to review all this ^ when i have time. but now i at least have this.
+I will have to review all this ^ when I have time. but now I at least have this.
 
 - TODO: sort the apps list from high to lower priority (defn, using daily, vs, not super needed)
 - TODO: maybe check if some apps can be brew installed, I never checked, update: the456 checked, see above)
