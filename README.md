@@ -9,9 +9,9 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 20th, 2023.
-- Version 0.2.1, build 022.
+- Version 0.2.2, build 023.
 
-## How does this work?
+## How Does This Work?
 
 Before you go through my list, I want to clarify that this is not a step-by-step guide. Rather, it is a collection of my preferences based on my interests, which include Minecraft server management, HTML/CSS, markdown document writing, YouTube watching and making, video editing, guitar/audio creation, documentation creation, and participation in existing projects. I am not a professional in any of these areas, but I find that the programs and tools I install make my daily usage of the Mac system more enjoyable and efficient.
 
@@ -36,6 +36,8 @@ Before I do almost anything with a new system, I go through the basics, which he
 I use Safari to check things without being logged in, I use Chrome as my main browser, and I have Firefox for all the exceptions or to double-check something.
 
 - For my sanity, I get Alfred, but I will list it below as a Homebrew install.
+
+- Before doing much more, I first run `xcode-select --install` in the command line.
 
 - [Homebrew][homebrew-url]: You can manually install this or open Terminal.app from macOS and run:
 ```bash
@@ -66,6 +68,10 @@ About iTerm2, it's a great replacement for the default macOS Terminal.app, I hav
 - `brew install stats` (menubar system stats)
 - `brew install itsycal` (menubar calendar)
 - `brew install keepingyouawake` (give some caffeine to your mac)
+
+### Find Package Browser
+
+You can search [this repository][formulae-url] for your favourite casks, formulae, apps.
 
 ## Apps
 
@@ -169,6 +175,7 @@ I will have to review all this ^ when I have time. but now I at least have this.
 ---
 
 [homebrew-url]: https://brew.sh/
+[formulae-url]: https://formulae.brew.sh/
 [discord-url]: https://discord.com/
 [sublime-text-url]: https://www.sublimetext.com/
 [sublime-merge-url]: https://www.sublimemerge.com/
