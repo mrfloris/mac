@@ -9,7 +9,7 @@ My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nv
 ## Latest Update
 
 - This repository's latest update is a snapshot of August 20th, 2023.
-- Version 0.2.2, build 023.
+- Version 0.2.2, build 024.
 
 ## How Does This Work?
 
