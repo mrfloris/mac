@@ -4,22 +4,22 @@ Once in a while, I get questions about how I set up my (new) Apple Mac system. T
 
 ## Current System
 
-My current system is an [Apple Mac Mini M1 from 2020][macmini-url] with a 1TB Nvme SSD, 16GB RAM, and running the latest version of macOS. It serves as my daily driver, allowing me to spread my workload between it and my older 2017 iMac, which mainly runs services.
+My current system is an [Apple Mac Mini M2Pro from 2023][macmini-url] with a 1TB Nvme SSD, 16GB RAM, and running the Sonoma version of macOS. It serves as my daily driver, allowing me to spread my workload between it and 2022 M1, and my older 2017 iMac, which mainly runs services.
 
 ## Latest Update
 
-- This repository's latest update is a snapshot of August 20th, 2023.
-- Version 0.2.2, build 024.
+- This repository's latest update is a snapshot of August 27th, 2024.
+- Version 0.2.3, build 025.
 
 ## How Does This Work?
 
-Before you go through my list, I want to clarify that this is not a step-by-step guide. Rather, it is a collection of my preferences based on my interests, which include Minecraft server management, HTML/CSS, markdown document writing, YouTube watching and making, video editing, guitar/audio creation, documentation creation, and participation in existing projects. I am not a professional in any of these areas, but I find that the programs and tools I install make my daily usage of the Mac system more enjoyable and efficient.
+Before you go through my list, I want to clarify that this is not a step-by-step guide. Instead, it is a collection of my preferences based on my interests, which include Minecraft server management, HTML/CSS, markdown document writing, YouTube watching and making, video editing, guitar/audio creation, documentation creation, and participation in existing projects. I am not a professional in any of these areas, but the programs and tools I install make my daily usage of the Mac system more enjoyable and efficient.
 
 ## Contributions / Credit
 
-I want to give credit to those who have inspired me to create this list and to those who have contributed to it. Any clone or pull request contributions will be acknowledged and included here.
+I want to credit those who have inspired me to create this list and those who have contributed to it. Any clone or pull request contributions you'll be acknowledged and included here.
 
-Thank you @the456gamer for your contributions!
+Thank you, @the456gamer, for your contributions!
 
 ---
 
@@ -27,8 +27,8 @@ Thank you @the456gamer for your contributions!
 
 Before I do almost anything with a new system, I go through the basics, which helps me then quickly set up the rest.
 
-- I make sure the system has the correct Apple ID / iCloud setup, so I have access to my iCloud files, as well as my Apps.
-- Then I install 1Password, so I can quickly log in to services for Apple, Google, Microsoft, etc. more conveniently.
+I make sure the system has the correct Apple ID / iCloud setup so I have access to my iCloud files and Apps.
+- Then I install 1Password to quickly log in to services for Apple, Google, Microsoft, etc., more conveniently.
 
 - Chrome
 - Firefox
@@ -37,23 +37,23 @@ I use Safari to check things without being logged in, I use Chrome as my main br
 
 - For my sanity, I get Alfred, but I will list it below as a Homebrew install.
 
-- Before doing much more, I first run `xcode-select --install` in the command line.
+- Before doing much more, I run `xcode-select --install` in the command line.
 
 - [Homebrew][homebrew-url]: You can manually install this or open Terminal.app from macOS and run:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-Homebrew is the package manager that is just super handy to quickly get a bunch of stuff installed and updated. It helps you make your Mac feel a bit more Linux-ey, if that makes sense.
+Homebrew is the package manager that is super handy for quickly installing and updating a bunch of stuff. It helps you make your Mac feel a bit more Linux-ey if that makes sense.
 
-Once Homebrew is installed, we have access to accounts through 1Password again; it's time to start tweaking the system.
+Once Homebrew is installed, we can access accounts through 1Password again; it's time to start tweaking the system.
 
 ## Homebrew install <package>
 
 A package, or "cask" in Homebrew, is easy to manage; you can quickly install and remove any cask.
 
-I have made a [homebrew-casks.txt][homebrewfolder-url] file that helps you on-line install them.
+I have made a [homebrew-casks.txt][homebrewfolder-url] file that helps you install them online.
 
-About iTerm2, it's a great replacement for the default macOS Terminal.app, I have a [separate page][terminalfolder-url] about it.
+About iTerm2, it's an excellent replacement for the default macOS Terminal.app, I have a [separate page][terminalfolder-url] about it.
 
 - `brew install alfred` (macOS spotlight (and dock..) replacement)
 - `brew install iterm2` (Terminal.app replacement: iTerm2)
@@ -67,11 +67,11 @@ About iTerm2, it's a great replacement for the default macOS Terminal.app, I hav
 - `brew install alt-tab` (macOS cmd-tab alternative)
 - `brew install stats` (menubar system stats)
 - `brew install itsycal` (menubar calendar)
-- `brew install keepingyouawake` (give some caffeine to your mac)
+- `brew install keepingyouawake` (give some caffeine to your Mac)
 
 ### Find Package Browser
 
-You can search [this repository][formulae-url] for your favourite casks, formulae, apps.
+You can search [this repository][formulae-url] for your favorite casks, formulae, apps.
 
 ## Apps
 
@@ -97,7 +97,7 @@ You can search [this repository][formulae-url] for your favourite casks, formula
 
 ## Java
 
-- [Java 20.0.2 via Oracle][java-url]
+- [Java 22.0.2 via Oracle][java-url]
 
 ## Games
 
