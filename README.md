@@ -94,6 +94,7 @@ You can search [this repository][formulae-url] for your favorite casks, formulae
 - [Screenflick][screenflick-url] (screen recorder)
 - [Transmit][transmit-url] (SFTP)
 - [Visual Studio Code][vs-code-url] (for my other projects that aren't Java)
+- [BetterDisplay Pro](https://github.com/waydabber/BetterDisplay#readme) Better Display Manager for macOS
 
 ## Java
 
