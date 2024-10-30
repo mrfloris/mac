@@ -8,8 +8,8 @@ My current system is an [Apple Mac Mini M2Pro from 2023][macmini-url] with a 1TB
 
 ## Latest Update
 
-- This repository's latest update is a snapshot of August 27th, 2024.
-- Version 0.2.3, build 025.
+- This repository's latest update is a snapshot of October 30th, 2024.
+- Version 0.2.3, build 026.
 
 ## How Does This Work?
 
