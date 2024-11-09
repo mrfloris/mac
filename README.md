@@ -173,6 +173,7 @@ I will have to review all this ^ when I have time. but now I at least have this.
 - TODO: maybe check if some apps can be brew installed, I never checked, update: the456 checked, see above)
 
 - TODO: omz https://github.com/ohmyzsh/ohmyzsh/wiki
+- TODO: p10k `brew install powerlevel10k`
 ---
 
 [homebrew-url]: https://brew.sh/
