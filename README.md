@@ -172,7 +172,7 @@ I will have to review all this ^ when I have time. but now I at least have this.
 - TODO: sort the apps list from high to lower priority (defn, using daily, vs, not super needed)
 - TODO: maybe check if some apps can be brew installed, I never checked, update: the456 checked, see above)
 
-
+- TODO: omz https://github.com/ohmyzsh/ohmyzsh/wiki
 ---
 
 [homebrew-url]: https://brew.sh/
