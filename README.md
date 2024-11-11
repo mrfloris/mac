@@ -174,6 +174,8 @@ I will have to review all this ^ when I have time. but now I at least have this.
 
 - TODO: omz https://github.com/ohmyzsh/ohmyzsh/wiki
 - TODO: p10k `brew install powerlevel10k` https://github.com/romkatv/powerlevel10k
+- todo : j22 https://jdk.java.net/archive/
+
 ---
 
 [homebrew-url]: https://brew.sh/
