@@ -4,12 +4,12 @@ Once in a while, I get questions about how I set up my (new) Apple Mac system. T
 
 ## Current System
 
-My current system is an [Apple Mac Mini M2Pro from 2023][macmini-url] with a 1TB Nvme SSD, 16GB RAM, and running the Sonoma version of macOS. It serves as my daily driver, allowing me to spread my workload between it and 2022 M1, and my older 2017 iMac, which mainly runs services.
+My current system is an [Apple MacBook Pro M4Max from 2024][macmini-url] with a 2TB Nvme SSD, 64GB RAM, and running the Sequoia version of macOS. It serves as my daily driver, allowing me to spread my workload between it and 2020 M1, 2023 M2Pro, 2024 M4Pro Mac Mini's, and my older 2017 iMac, which mainly runs services.
 
 ## Latest Update
 
-- This repository's latest update is a snapshot of October 30th, 2024.
-- Version 0.2.3, build 026.
+- This repository's latest update is a snapshot of November 11th, 2024.
+- Version 0.2.4, build 027.
 
 ## How Does This Work?
 
@@ -202,4 +202,4 @@ I will have to review all this ^ when I have time. but now I at least have this.
 [java-url]: /java
 [homebrewfolder-url]: /homebrew
 [terminalfolder-url]: /terminal
-[macmini-url]: https://everymac.com/systems/apple/mac_mini/specs/mac-mini-m1-8-core-2020-specs.html
+[macmini-url]: https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-m4-max-16-core-cpu-40-core-gpu-16-2024-specs.html
