@@ -8,8 +8,8 @@ My current system is an [Apple MacBook Pro M4Max from 2024][macmini-url] with a 
 
 ## Latest Update
 
-- This repository's latest update is a snapshot of November 11th, 2024.
-- Version 0.2.4, build 027.
+- This repository's latest update is a snapshot of November 12th, 2024.
+- Version 0.2.5, build 028.
 
 ## How Does This Work?
 
@@ -172,9 +172,10 @@ I will have to review all this ^ when I have time. but now I at least have this.
 - TODO: sort the apps list from high to lower priority (defn, using daily, vs, not super needed)
 - TODO: maybe check if some apps can be brew installed, I never checked, update: the456 checked, see above)
 
+- TODO: github stuff so sublime merge works
 - TODO: omz https://github.com/ohmyzsh/ohmyzsh/wiki
 - TODO: p10k `brew install powerlevel10k` https://github.com/romkatv/powerlevel10k
-- todo : j22 https://jdk.java.net/archive/
+- todo : java22 https://jdk.java.net/archive/
 
 ---
 
