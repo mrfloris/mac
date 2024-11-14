@@ -154,11 +154,11 @@ Personally, I think it's nice to have personal preferences. This script automate
 ### Resources
 - Apple's support community surely has some existing threads with possible solutions. This page is limited to the settings I generally change when I fresh install a system. 
 - Additionally, this only covers setting some default, and then i use shift+command+4+space, and manage the screenshot manually.. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
-- Apple's screenshot documentation: https://support.apple.com/guide/mac-help/take-screenshots-on-your-mac-mchlp2591/mac
-- Apple's developers documentation: https://developer.apple.com/documentation/appkit/nsscreen/1526559-screenshot
+- Apple's screenshot documentation: https://support.apple.com/en-gb/guide/mac-help/mh26782/15.0/mac/15.0
+- Apple's developers documentation: https://developer.apple.com/search/?q=screenshot
 
 ### Version / Changelog
-Last updated: November 14th, 2024 - version 1.1.0, build 014.
+Last updated: November 14th, 2024 - version 1.1.1, build 015.
 
 - **v0.0.x** (Nov 14, 2024): Initial release of files, readme & .sh - wrote nothing yet
 - **v0.1.x** (Nov 14, 2024): Initial release of having 'something' for the readme
