@@ -117,21 +117,31 @@ https://github.com/mrfloris/mac/blob/main/screenshots/screencapture-config.sh
 - When you run it without any parameter, it will default to `-h`
 <img width="746" alt="screenshot- 2024-11-14 at 11 45 04" src="https://github.com/user-attachments/assets/2e7676b1-224b-4818-b6cf-d06d17442da8">
 
+---
+
 - And feeding it the `-h` or `--help` parameters, it will show that same screen
 <img width="793" alt="screenshot- 2024-11-14 at 11 45 14" src="https://github.com/user-attachments/assets/1a20a918-667d-4f3a-af28-803be68b7ce2">
 <img width="774" alt="screenshot- 2024-11-14 at 11 45 22" src="https://github.com/user-attachments/assets/7fb6b937-9e0a-4914-a519-a4a9fe436116">
 
+---
+
 - You can review the currently set custom settings with `-list`
 <img width="683" alt="Screenshot 2024-11-14 at 11 45 39" src="https://github.com/user-attachments/assets/21bd4f95-c74f-4c61-9982-55ff2f6182da">
 
+---
+
 - Which you don't have to clear first, it will override, but, in case you do need to troubleshoot and wish to start over, you can just use the `-reset` parameter
 <img width="552" alt="Screenshot 2024-11-14 at 11 45 49" src="https://github.com/user-attachments/assets/5e050fc6-d106-4885-a9d8-b4344f147b0d">
+
+---
 
 - And when you're ready to start, feed it the `-ask` parameter, and you can press enter to quickly go through the defaults, or enter a custom value if you want. 
 - It will prompt you first to confirm those are the changes you wish to make, control-c can always be used, but a graceful n to discontinue is possible at this stage. 
 - If you select y, for yes, it will attempt to write the values to the plist preference files. 
 - And then it will restart the service. The changes are live, you can use them right away. 
 <img width="699" alt="Screenshot- 2024-11-14 at 11 46 21" src="https://github.com/user-attachments/assets/b793b243-554b-48c9-9478-7b6acc6844d9">
+
+---
 
 - There is some user-input validation, and if you point it to a custom directly it will check if it exists, if not, it will prompt you first to create it. 
 
@@ -140,4 +150,4 @@ https://github.com/mrfloris/mac/blob/main/screenshots/screencapture-config.sh
 - Additionally, this only covers setting some default, and then i use shift+command+4+space, and deal with the screenshot manually. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
 
 ### Version
-Last updated: November 14th, 2024 - version 1.0.1, build 011.
+Last updated: November 14th, 2024 - version 1.0.2, build 012.
