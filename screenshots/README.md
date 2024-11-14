@@ -4,6 +4,8 @@ This guide provides steps to configure and optimize macOS screenshot settings to
 
 I like things a certain way, and this helps me make sure that I understand what is possible, and how I want it. And this way I can have the same set-up on each mac system that I have.
 
+`defaults` modifies preferences that persist even after restarting the mac system.
+
 **Note:** If you make any changes, restart the service (#10) and if you regret your changes you can reset to default again too (#11).
 
 ## Manual screenshot settings (explained)
@@ -57,7 +59,7 @@ By default, screenshots are PNG files. You can change to a different format (e.g
 ```bash
 defaults write com.apple.screencapture type -string "png"
 ```
-Supported formats include `jpg`, `png`, `pdf`, `tiff`, and `gif`. I prefer PNG, despite the filesize, because it allows me to capture full windows, with shadows and transparant backgrounds.
+Supported formats include `jpg`, `png`, `pdf`, `tiff`, and `gif`. I prefer PNG, despite the filesize, because it allows me to capture full windows, with shadows and transparent backgrounds.
 
 ### 7. Add a Custom Capture Delay
 Add a delay (in seconds) to screenshots:
@@ -83,21 +85,23 @@ defaults write com.apple.screencapture disable-shadow-background -bool true
 ```
 
 ### 10. Restart SystemUIServer
-After you're done running the commands to your liking, don't forget to restart the serivce, you can do so by typing this:
+The macOS systemUIServer manages various UI elements on macOS, including screenshot-related functionality.
+
+After you're done running the commands to your liking, don't forget to restart this serivce, you can do so by typing this:
 ```bash
 killall SystemUIServer
 ```
 Or just run the sh script!
 
 ### 11. Reset All Screenshot Settings to Default
-**Method 1**, another command!
+**Method 1**, Reset via command:
 If you want to revert to macOS's default screenshot settings:
 ```bash
 defaults delete com.apple.screencapture
 ```
-**Method 2**, the above, but ..
-by running the shell script with the `-reset` parameter.
-**Method 3**, deleting the .plist file manually, you can find it here:
+**Method 2**, Use the shell script with `-reset` parameter.
+
+**Method 3**, Delete the ``.plist` file manually from:
 ```
 ~/Library/Preferences/com.apple.screencapture.plist
 ~/Library/Preferences/com.apple.screencaptureui.plist (optional)
@@ -105,15 +109,15 @@ by running the shell script with the `-reset` parameter.
 
 ## Shell script
 
-Personally, I think it's nice to have personal preferences. You can use my script which will ask you questions, you give your preferences and it will excecute those commands and reset the service for you. 
+Personally, I think it's nice to have personal preferences. This script automates the process of customizing screenshot settings. It interacts with you by asking for your preferences and applies them automatically.
 
 [**View / Download the screencapture-config.sh script**](screencapture-config.sh)
 
 ### Shell Script Examples and Documentation
 
 **Prerequisite**
-- Be on a Mac system with macOS 15.1, that's what I've tested on. Anything higher or lower could have changes. 
-- You have to `chmod a+x screencapture-config.sh` once, so you can execute it. 
+- You must be on macOS 15.1 or newer (tested on Apple Silicon M1, M2Pro, etc.). 
+- You have to `chmod a+x screencapture-config.sh` once, so it is executable. 
 
 **Documentation**
 - When you run it without any parameter, it will default to `-h`
@@ -149,7 +153,15 @@ Personally, I think it's nice to have personal preferences. You can use my scrip
 
 ### Resources
 - Apple's support community surely has some existing threads with possible solutions. This page is limited to the settings I generally change when I fresh install a system. 
-- Additionally, this only covers setting some default, and then i use shift+command+4+space, and deal with the screenshot manually. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
+- Additionally, this only covers setting some default, and then i use shift+command+4+space, and manage the screenshot manually.. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
+- Apple's screenshot documentation: https://support.apple.com/guide/mac-help/take-screenshots-on-your-mac-mchlp2591/mac
+- Apple's developers documentation: https://developer.apple.com/documentation/appkit/nsscreen/1526559-screenshot
 
-### Version
+### Version / Changelog
 Last updated: November 14th, 2024 - version 1.1.0, build 014.
+
+- **v0.0.x** (Nov 14, 2024): Initial release of files, readme & .sh - wrote nothing yet
+- **v0.1.x** (Nov 14, 2024): Initial release of having 'something' for the readme
+- **v0.2.x** (Nov 14, 2024): Initial release of having 'something' for the shell file
+- **v1.0.x** (Nov 14, 2024): First bit of finished text, finished code, something you can download and use.
+- **v1.1.x** (Nov 14, 2024): Cleaned up the readme and the shell file. Now I have something that I use!
