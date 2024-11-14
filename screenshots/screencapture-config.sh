@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.4.3, build 014 for macOS 15.1+
+# @Version: 0.4.4, build 015 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -30,19 +30,20 @@ show_help() {
 
 # Function to reset to default screenshot settings
 reset_preferences() {
-    echo "Resetting to default screenshot settings..."
-    defaults delete com.apple.screencapture
-    defaults delete com.apple.screencaptureui
+    echo -e "${C}Resetting to default screenshot settings...${R}"
+    defaults delete com.apple.screencapture 2>/dev/null
+    defaults delete com.apple.screencaptureui 2>/dev/null
     sleep 0.1
     killall SystemUIServer
-    echo "Settings have been reset to macOS defaults."
+    echo -e "${C} → Settings have been reset to macOS defaults.${R}\n"
 }
 
 # Function to list current preferences
 list_current_preferences() {
-    echo -e "\nCurrent screenshot preferences:"
+    echo -e "${C}Current screenshot preferences:${R}"
     defaults read com.apple.screencapture 2>/dev/null || echo "No custom preferences set."
     defaults read com.apple.screencaptureui 2>/dev/null || echo "No thumbnail expiration set."
+    echo # empty line
 }
 
 # Function to prompt and read user input for each setting
@@ -200,7 +201,7 @@ case "$1" in
         exit 0 # Ensures the script exits after displaying help
         ;;
     *)
-        echo -e "${X}Invalid option! ${R}${W}Try: ${C}"$0" -ask${R} to get started."
+        echo -e "${X}Invalid option! ${R}${W}Try: ${C}"$0" -ask${R} to get started. \n"
         exit 1
         ;;
 esac
