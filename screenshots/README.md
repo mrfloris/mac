@@ -82,11 +82,18 @@ killall SystemUIServer
 Or just run the sh script!
 
 ## 10. Reset All Screenshot Settings to Default
+**Method 1**, another command!
 If you want to revert to macOS's default screenshot settings:
 ```bash
 defaults delete com.apple.screencapture
 ```
-Or run the shell script with the `-reset` parameter.
+**Method 2**, the above, but ..
+by running the shell script with the `-reset` parameter.
+**Method 3**, deleting the .plist file manually, you can find it here:
+```
+~/Library/Preferences/com.apple.screencapture.plist
+~/Library/Preferences/com.apple.screencaptureui.plist (optional)
+```
 
 # Shell script
 
@@ -102,5 +109,9 @@ Personally, I think it's nice to have personal preferences. You can use my scrip
 - merge version 1 and 2 together
 - add startup params so we can just run the script
 
+## Resources
+- Apple's support community surely has some existing threads with possible solutions. This page is limited to the settings I generally change when I fresh install a system. 
+- Additionally, this only covers setting some default, and then i use shift+command+4+space, and deal with the screenshot manually. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
+
 ### version
-Last updated: November 14th, 2024 - version 0.1.0, build 003.
+Last updated: November 14th, 2024 - version 0.1.2, build 005.
