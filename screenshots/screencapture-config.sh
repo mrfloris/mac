@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.4.4, build 015 for macOS 15.1+
+# @Version: 0.4.5, build 016 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -48,18 +48,20 @@ list_current_preferences() {
 
 # Function to prompt and read user input for each setting
 prompt_user() {
-    echo -e "Enter your preferred screenshot settings:\n"
+    echo -e "${C}Enter your preferred screenshot settings:${R}\n"
     
     # Screenshot Save Location
-    read -p "Enter the preferred save location (default: ~/Desktop/Screeniez): " save_location
+    echo -e -n "${B}Enter the preferred save location ${R}[default: ${C}~/Desktop/Screeniez${R}]: ${R}"
+    read save_location
     save_location=${save_location:-"$HOME/Desktop/Screeniez"}
 
     # Check if the path exists, and expand ~ to the full home path
     save_location_expanded=$(eval echo "$save_location")
     
     if [ ! -d "$save_location_expanded" ]; then
-        echo "The directory '$save_location_expanded' does not exist."
-        read -p "Would you like to create this directory? (y/n) [default: y]: " create_dir
+        echo -e "The directory '$save_location_expanded' does not exist."
+        echo -e -n "${B}Would you like to create this directory? (y/n) ${R}[default: ${C}y${R}]: ${R}"
+        read create_dir
         create_dir=${create_dir:-"y"}
         
         if [ "$create_dir" = "y" ]; then
@@ -77,74 +79,84 @@ prompt_user() {
 
     # File Format (with validation)
     valid_formats=("png" "jpg" "pdf" "tiff" "gif")
-    valid_formats_str=$(IFS=", "; echo "${valid_formats[*]}")  # Join the formats into a comma-separated string
+    valid_formats_str=$(IFS=", "; echo "${valid_formats[*]}") # Join the formats into a comma-separated string
 
     while true; do
-        read -p "Choose the file format ($valid_formats_str) [default: png]: " file_format
-        file_format=${file_format:-"png"}  # Default to png if no input
+        echo -e -n "${B}Choose the file format${R} ${C}(${valid_formats_str}) ${R}[default: ${C}png${R}]: ${R}"
+        read file_format
+        file_format=${file_format:-"png"} # Default to png if no input
         
         # Check if the input is valid
         if [[ " ${valid_formats[@]} " =~ " ${file_format} " ]]; then
-            break  # Exit loop if input is valid
+            break # Exit loop if input is valid
         else
-            echo "Invalid format. Please choose one of: $valid_formats_str."
+            echo -e "${X}Invalid format.${Y} Please choose one of: $valid_formats_str."
         fi
     done
 
     # Screenshot Base Name
-    read -p "Enter the preferred base name for screenshots (default: screenshot-): " base_name
+    echo -e -n "${B}Enter the preferred base name for screenshots ${R}[default: ${C}screenshot-${R}]: ${R}"
+    read base_name
     base_name=${base_name:-"screenshot-"}
 
     # Shadows
-    read -p "Include window shadows? (y/n) [default: y]: " shadow
+    echo -e -n "${B}Include window shadows? ${Y}(y/n) ${R}[default: ${C}y${R}]: ${R}"
+    read shadow
     shadow=${shadow:-"y"}
     shadow_flag="false" # by default, shadows are included
     [ "$shadow" = "n" ] && shadow_flag="true"
 
     # Transparent Background for Shadows
-    read -p "Use transparent background for shadows? (y/n) [default: y]: " transparent_bg
+    echo -e -n "${B}Use transparent background for shadows? ${Y}(y/n) ${R}[default: ${C}y${R}]: ${R}"
+    read transparent_bg
     transparent_bg=${transparent_bg:-"y"}
     transparent_bg_flag="true" # by default, background is transparent
     [ "$transparent_bg" = "n" ] && transparent_bg_flag="false"
 
     # Screenshot Delay
-    read -p "Enter screenshot delay in seconds (0 for none) [default: 0]: " screenshot_delay
+    echo -e -n "${B}Enter screenshot delay in seconds (0 for none) ${R}[default: ${C}0${R}]: ${R}"
+    read screenshot_delay
     screenshot_delay=${screenshot_delay:-0}
 
     # Mouse Cursor
-    read -p "Include mouse cursor in screenshots? (y/n) [default: n]: " cursor
+    echo -e -n "${B}Include mouse cursor in screenshots? ${Y}(y/n) ${R}[default: ${C}n${R}]: ${R}"
+    read cursor
     cursor=${cursor:-"n"}
     cursor_flag="false" # by default, cursor is not included
     [ "$cursor" = "y" ] && cursor_flag="true"
 
     # Thumbnails
-    read -p "Show screenshot thumbnail preview? (y/n) [default: y]: " thumbnail
+    echo -e -n "${B}Show screenshot thumbnail preview? ${Y}(y/n) ${R}[default: ${C}y${R}]: ${R}"
+    read thumbnail
     thumbnail=${thumbnail:-"y"}
     thumbnail_flag="true" # by default, thumbnails are shown
     [ "$thumbnail" = "n" ] && thumbnail_flag="false"
 
     # Thumbnail Expiration Time
-    read -p "Set thumbnail expiration time in seconds [default: 12.0]: " thumbnail_expiration
+    echo -e -n "${B}Set thumbnail expiration time in seconds ${R}[default: ${C}12.0${R}]: ${R}"
+    read thumbnail_expiration
     thumbnail_expiration=${thumbnail_expiration:-12.0}
 }
 
+
+
 # Function to display the selected preferences
 display_selections() {
-    echo -e "\nYour selected screenshot preferences:"
-    echo "Save Location: $save_location"
-    echo "File Format: $file_format"
-    echo "Screenshot Base Name: $base_name"
-    echo "Include Window Shadows: $shadow"
-    echo "Transparent Background for Shadows: $transparent_bg"
-    echo "Screenshot Delay: $screenshot_delay seconds"
-    echo "Include Mouse Cursor: $cursor"
-    echo "Show Thumbnail Preview: $thumbnail"
-    echo "Thumbnail Expiration Time: $thumbnail_expiration seconds"
+    echo -e "\n${C}Your selected screenshot preferences:${R}"
+    echo -e "→ ${R}Save Location:${Y} $save_location ${R}"
+    echo -e "→ ${R}File Format:${Y} $file_format ${R}"
+    echo -e "→ ${R}Screenshot Base Name:${Y} $base_name ${R}"
+    echo -e "→ ${R}Include Window Shadows:${Y} $shadow ${R}"
+    echo -e "→ ${R}Transparent Background for Shadows:${Y} $transparent_bg ${R}"
+    echo -e "→ ${R}Screenshot Delay:${Y} $screenshot_delay ${R}seconds ${R}"
+    echo -e "→ ${R}Include Mouse Cursor:${Y} $cursor ${R}"
+    echo -e "→ ${R}Show Thumbnail Preview:${Y} $thumbnail ${R}"
+    echo -e "→ ${R}Thumbnail Expiration Time:${Y} $thumbnail_expiration ${R}seconds ${R}"
 }
 
 # Function to apply preferences based on user input
 apply_preferences() {
-    echo -e "\nApplying your preferences..."
+    echo -e "\n${C}Applying your preferences...${R}"
 
     # Set the screenshot save location
     commands=(
@@ -168,7 +180,7 @@ apply_preferences() {
     # Additional sleep delay before restarting SystemUIServer
     sleep 0.1
     killall SystemUIServer
-    echo "Preferences applied and SystemUIServer restarted."
+    echo -e "${Y}Preferences applied and SystemUIServer restarted.${R}\n"
 }
 
 # Main Script Execution
@@ -185,12 +197,17 @@ case "$1" in
     -ask)
         prompt_user # Gather user input
         display_selections # Show the selected settings
-        read -p "Ready to apply these settings? (y/n) [default: y]: " confirm
+        # Using echo -n to print the prompt with colors
+		echo -n -e "${W}${B}Ready to apply these settings? ${R}${Y}(y/n)${R} [default: ${C}y${R}]: "
+		# Use read to capture user input, defaulting to 'y' if the user presses enter without typing
+		read confirm
+		confirm=${confirm:-"y"}  # Default to 'y' if no input
+
         confirm=${confirm:-"y"}
         if [ "$confirm" = "y" ]; then
             apply_preferences
         else
-            echo "Settings were not applied."
+            echo -e "${X}Settings were not applied.${R}"
         fi
         ;;
     -reset)
