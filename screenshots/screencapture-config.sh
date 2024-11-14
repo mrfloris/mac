@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.3.1, build 007 for macOS 15.1+
+# @Version: 0.4.1, build 011 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -12,6 +12,7 @@
 ### todo
 # - maybe add default theme colors, so we can make things pretty and have a default output() for text?
 # - known issue; if you set a path that doesn't exist, it wont error, it will take the screenshot - but fails and puts it on the default ~/Desktop (so i might want to do a dir check or something)
+# - known issue; user input type could be a mismatch
 
 echo -e "\nWelcome to the macOS screencapture Customizer\n"
 
@@ -49,7 +50,28 @@ prompt_user() {
     
     # Screenshot Save Location
     read -p "Enter the preferred save location (default: ~/Desktop/Screeniez): " save_location
-    save_location=${save_location:-"~/Desktop/Screeniez"}
+    save_location=${save_location:-"$HOME/Desktop/Screeniez"}
+
+    # Check if the path exists, and expand ~ to the full home path
+    save_location_expanded=$(eval echo "$save_location")
+    
+    if [ ! -d "$save_location_expanded" ]; then
+        echo "The directory '$save_location_expanded' does not exist."
+        read -p "Would you like to create this directory? (y/n) [default: y]: " create_dir
+        create_dir=${create_dir:-"y"}
+        
+        if [ "$create_dir" = "y" ]; then
+            mkdir -p "$save_location_expanded" 2>/dev/null
+            if [ $? -ne 0 ]; then
+                echo "Failed to create the directory '$save_location_expanded'. Exiting script."
+                exit 1
+            fi
+            echo "Directory '$save_location_expanded' created."
+        else
+            echo "Directory creation was declined. Exiting script."
+            exit 1
+        fi
+    fi
 
     # File Format
     read -p "Choose the file format (png, jpg, pdf, tiff, gif) [default: png]: " file_format
@@ -62,13 +84,13 @@ prompt_user() {
     # Shadows
     read -p "Include window shadows? (y/n) [default: y]: " shadow
     shadow=${shadow:-"y"}
-    shadow_flag="false"  # by default, shadows are included
+    shadow_flag="false" # by default, shadows are included
     [ "$shadow" = "n" ] && shadow_flag="true"
 
     # Transparent Background for Shadows
     read -p "Use transparent background for shadows? (y/n) [default: y]: " transparent_bg
     transparent_bg=${transparent_bg:-"y"}
-    transparent_bg_flag="true"  # by default, background is transparent
+    transparent_bg_flag="true" # by default, background is transparent
     [ "$transparent_bg" = "n" ] && transparent_bg_flag="false"
 
     # Screenshot Delay
@@ -78,13 +100,13 @@ prompt_user() {
     # Mouse Cursor
     read -p "Include mouse cursor in screenshots? (y/n) [default: n]: " cursor
     cursor=${cursor:-"n"}
-    cursor_flag="false"  # by default, cursor is not included
+    cursor_flag="false" # by default, cursor is not included
     [ "$cursor" = "y" ] && cursor_flag="true"
 
     # Thumbnails
     read -p "Show screenshot thumbnail preview? (y/n) [default: y]: " thumbnail
     thumbnail=${thumbnail:-"y"}
-    thumbnail_flag="true"  # by default, thumbnails are shown
+    thumbnail_flag="true" # by default, thumbnails are shown
     [ "$thumbnail" = "n" ] && thumbnail_flag="false"
 
     # Thumbnail Expiration Time
@@ -112,15 +134,15 @@ apply_preferences() {
 
     # Set the screenshot save location
     commands=(
-        "defaults write com.apple.screencapture location -string \"$save_location\""  # Set save location
-        "defaults write com.apple.screencapture type -string \"$file_format\""  # Set file format (e.g., png, jpg)
-        "defaults write com.apple.screencapture name -string \"$base_name\""  # Set base name for screenshots
-        "defaults write com.apple.screencapture disable-shadow -bool $shadow_flag"  # Enable/Disable shadow in screenshots
-        "defaults write com.apple.screencapture disable-shadow-background -bool $transparent_bg_flag"  # Enable/Disable transparent background
-        "defaults write com.apple.screencapture delay -int $screenshot_delay"  # Set delay before screenshot is taken
-        "defaults write com.apple.screencapture include-cursor -bool $cursor_flag"  # Include cursor in screenshot
-        "defaults write com.apple.screencapture show-thumbnail -bool $thumbnail_flag"  # Show/Hide thumbnail preview
-        "defaults write com.apple.screencaptureui thumbnailExpiration -float $thumbnail_expiration"  # Set thumbnail expiration time
+        "defaults write com.apple.screencapture location -string \"$save_location\"" # Set save location
+        "defaults write com.apple.screencapture type -string \"$file_format\"" # Set file format (e.g., png, jpg)
+        "defaults write com.apple.screencapture name -string \"$base_name\"" # Set base name for screenshots
+        "defaults write com.apple.screencapture disable-shadow -bool $shadow_flag" # Enable/Disable shadow in screenshots
+        "defaults write com.apple.screencapture disable-shadow-background -bool $transparent_bg_flag" # Enable/Disable transparent background
+        "defaults write com.apple.screencapture delay -int $screenshot_delay" # Set delay before screenshot is taken
+        "defaults write com.apple.screencapture include-cursor -bool $cursor_flag" # Include cursor in screenshot
+        "defaults write com.apple.screencapture show-thumbnail -bool $thumbnail_flag" # Show/Hide thumbnail preview
+        "defaults write com.apple.screencaptureui thumbnailExpiration -float $thumbnail_expiration" # Set thumbnail expiration time
     )
 
     # Execute each command with a small sleep delay between them
