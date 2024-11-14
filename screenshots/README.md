@@ -107,6 +107,9 @@ Personally, I think it's nice to have personal preferences. You can use my scrip
 
 https://github.com/mrfloris/mac/blob/main/screenshots/screencapture-config.sh
 
+[View / Download the screencapture-config.sh script](screenshots/screencapture-config.sh)
+
+
 ## Shell Script Examples and Documentation
 
 ### Prerequisite
