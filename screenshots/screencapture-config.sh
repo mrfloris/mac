@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.4.6, build 017 for macOS 15.1+
+# @Version: 0.4.7, build 018 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -9,10 +9,7 @@
 # @Syntax: ./screencapture-config.sh (will show help)
 # @URL: Latest source, wiki, & support: https://github.com/mrfloris/mac/tree/main/screenshots
 
-### todo
-# - known issue; user input type could be a mismatch
-
-# theme
+# Theme
 B="\033[1m"; Y="\033[33m"; C="\033[36m"; X="\033[91m"; R="\033[0m"; W="\033[97m"
 
 # Lets get started
@@ -269,10 +266,10 @@ case "$1" in
         prompt_user # Gather user input
         display_selections # Show the selected settings
         # Using echo -n to print the prompt with colors
-		echo -n -e "${W}${B}Ready to apply these settings? ${R}${Y}(y/n)${R} [default: ${C}y${R}]: "
-		# Use read to capture user input, defaulting to 'y' if the user presses enter without typing
-		read confirm
-		confirm=${confirm:-"y"}  # Default to 'y' if no input
+        echo -n -e "${W}${B}Ready to apply these settings? ${R}${Y}(y/n)${R} [default: ${C}y${R}]: "
+        # Use read to capture user input, defaulting to 'y' if the user presses enter without typing
+        read confirm
+        confirm=${confirm:-"y"}  # Default to 'y' if no input
 
         confirm=${confirm:-"y"}
         if [ "$confirm" = "y" ]; then
@@ -294,7 +291,7 @@ case "$1" in
         ;;
 esac
 
-
 # DEBUG (quickly print out the settings, so we can double check)
-list_current_preferences
+# list_current_preferences
+
 #EOF Copyright (c) 1977-2024 - Floris Fiedeldij Dop - https://mrfloris.com
