@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.0.2, build 002 for macOS 15.1+
+# @Version: 0.1.0, build 002 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -19,36 +19,46 @@
 
 # Change Screenshot Save Location
 defaults write com.apple.screencapture location -string "~/Desktop/Screeniez"
+sleep 0.2
 
 # Remove Shadows from Window Screenshots
 defaults write com.apple.screencapture disable-shadow -bool false
+sleep 0.2
 
 # Customize the Screenshot File Name Prefix
 defaults write com.apple.screencapture name "screenshot-"
+sleep 0.2
 
 # Change the floating Thumbnail time
 # Depending on the system, the expiration with false for thumbnails might still show it, 
 # setting it to 0 will not show it and write to disk, you could always remove this, 
 # reset defaults, and run the script again. But I like it to show and a bit longer.
 defaults write com.apple.screencaptureui thumbnailExpiration -float 12.0
+sleep 0.2
 
 # Disable Screenshot Thumbnails (for Faster Captures)
 defaults write com.apple.screencapture show-thumbnail -bool true
+sleep 0.2
 
 # Change Screenshot File Format
 defaults write com.apple.screencapture type -string "png"
+sleep 0.2
 
 # Add a Custom Capture Delay
 defaults write com.apple.screencapture delay -int 20
+sleep 0.2
 
 # Capture the Mouse Cursor in Screenshots
 defaults write com.apple.screencapture include-cursor -bool false
+sleep 0.2
 
 # Make Backgrounds Transparent for Shadows
 defaults write com.apple.screencapture disable-shadow-background -bool true
+sleep 0.2
 
 # Restart SystemUIServer
 killall SystemUIServer
+sleep 0.2
 
 echo "Screenshot preferences applied successfully!"
 
