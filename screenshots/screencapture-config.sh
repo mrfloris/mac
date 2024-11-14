@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.4.5, build 016 for macOS 15.1+
+# @Version: 0.4.6, build 017 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -14,7 +14,8 @@
 
 # theme
 B="\033[1m"; Y="\033[33m"; C="\033[36m"; X="\033[91m"; R="\033[0m"; W="\033[97m"
-echo -e "debug: ${B}testB${R} , ${Y}testY${R} , ${C}testC${R} , ${X}testX${R}, ${R}testR, test"
+
+# Lets get started
 echo -e "\n${B}${Y}Welcome to the macOS screencapture Customizer${R}\n"
 
 # Function to display help
@@ -95,50 +96,120 @@ prompt_user() {
     done
 
     # Screenshot Base Name
-    echo -e -n "${B}Enter the preferred base name for screenshots ${R}[default: ${C}screenshot-${R}]: ${R}"
+    echo -e -n "${B}Enter the preferred base name for screenshots ${R}[default: ${C}Screenshot-${R}]: ${R}"
     read base_name
-    base_name=${base_name:-"screenshot-"}
+    base_name=${base_name:-"Screenshot-"}
 
     # Shadows
     echo -e -n "${B}Include window shadows? ${Y}(y/n) ${R}[default: ${C}y${R}]: ${R}"
     read shadow
+
+    # Set default value if no input is provided
     shadow=${shadow:-"y"}
+
+    # Validate input, ensure it's only 'y' or 'n'
+    while [[ "$shadow" != "y" && "$shadow" != "n" ]]; do
+        echo -e -n "${B}Please enter 'y' for yes or 'n' for no: ${R}"
+        read shadow
+        shadow=${shadow:-"y"}  # default to 'y' if empty
+    done
+
+    # Set shadow_flag based on the input
     shadow_flag="false" # by default, shadows are included
     [ "$shadow" = "n" ] && shadow_flag="true"
 
     # Transparent Background for Shadows
     echo -e -n "${B}Use transparent background for shadows? ${Y}(y/n) ${R}[default: ${C}y${R}]: ${R}"
     read transparent_bg
+
+    # Set default value if no input is provided
     transparent_bg=${transparent_bg:-"y"}
+
+    # Validate input, ensure it's only 'y' or 'n'
+    while [[ "$transparent_bg" != "y" && "$transparent_bg" != "n" ]]; do
+        echo -e -n "${B}Please enter 'y' for yes or 'n' for no: ${R}"
+        read transparent_bg
+        transparent_bg=${transparent_bg:-"y"}  # default to 'y' if empty
+    done
+
+    # Set transparent_bg_flag based on the input
     transparent_bg_flag="true" # by default, background is transparent
     [ "$transparent_bg" = "n" ] && transparent_bg_flag="false"
 
     # Screenshot Delay
     echo -e -n "${B}Enter screenshot delay in seconds (0 for none) ${R}[default: ${C}0${R}]: ${R}"
     read screenshot_delay
+
+    # Set default value if no input is provided
     screenshot_delay=${screenshot_delay:-0}
+
+    # Validate input to ensure it's a valid integer (whole seconds)
+    while ! [[ "$screenshot_delay" =~ ^[0-9]+$ ]]; do
+        echo -e -n "${B}Please enter a valid integer value for screenshot delay in seconds (whole seconds only): ${R}"
+        read screenshot_delay
+        screenshot_delay=${screenshot_delay:-0}  # default to 0 if empty
+    done
+
+    # Print the valid screenshot delay
+    echo "Screenshot delay set to: $screenshot_delay seconds."
 
     # Mouse Cursor
     echo -e -n "${B}Include mouse cursor in screenshots? ${Y}(y/n) ${R}[default: ${C}n${R}]: ${R}"
     read cursor
+
+    # Set default value if no input is provided
     cursor=${cursor:-"n"}
+
+    # Validate input, ensure it's only 'y' or 'n'
+    while [[ "$cursor" != "y" && "$cursor" != "n" ]]; do
+        echo -e -n "${B}Please enter 'y' for yes or 'n' for no: ${R}"
+        read cursor
+        cursor=${cursor:-"n"}  # default to 'n' if empty
+    done
+
+    # Set cursor_flag based on the input
     cursor_flag="false" # by default, cursor is not included
     [ "$cursor" = "y" ] && cursor_flag="true"
 
     # Thumbnails
     echo -e -n "${B}Show screenshot thumbnail preview? ${Y}(y/n) ${R}[default: ${C}y${R}]: ${R}"
     read thumbnail
+
+    # Set default value if no input is provided
     thumbnail=${thumbnail:-"y"}
+
+    # Validate input, ensure it's only 'y' or 'n'
+    while [[ "$thumbnail" != "y" && "$thumbnail" != "n" ]]; do
+        echo -e -n "${B}Please enter 'y' for yes or 'n' for no: ${R}"
+        read thumbnail
+        thumbnail=${thumbnail:-"y"}  # default to 'y' if empty
+    done
+
+    # Set thumbnail_flag based on the input
     thumbnail_flag="true" # by default, thumbnails are shown
     [ "$thumbnail" = "n" ] && thumbnail_flag="false"
 
     # Thumbnail Expiration Time
     echo -e -n "${B}Set thumbnail expiration time in seconds ${R}[default: ${C}12.0${R}]: ${R}"
     read thumbnail_expiration
+
+    # Set default value if no input is provided
     thumbnail_expiration=${thumbnail_expiration:-12.0}
+
+    # Validate input to ensure it's a valid float
+    while ! [[ "$thumbnail_expiration" =~ ^[0-9]+(\.[0-9]+)?$ ]]; do
+        echo -e -n "${B}Please enter a valid numeric value (float) for thumbnail expiration time in seconds: ${R}"
+        read thumbnail_expiration
+        thumbnail_expiration=${thumbnail_expiration:-12.0}  # default to 12.0 if empty
+    done
+
+    # Ensure it's in float format (e.g., 12 -> 12.0)
+    thumbnail_expiration=$(printf "%.1f" "$thumbnail_expiration")
+
+    # Print the valid thumbnail expiration time
+    echo "Thumbnail expiration time set to: $thumbnail_expiration seconds."
+
 }
-
-
 
 # Function to display the selected preferences
 display_selections() {
