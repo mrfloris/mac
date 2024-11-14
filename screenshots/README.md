@@ -99,19 +99,11 @@ by running the shell script with the `-reset` parameter.
 
 Personally, I think it's nice to have personal preferences. You can use my script which will ask you questions, you give your preferences and it will excecute those commands and reset the service for you. 
 
-## script todo
-- make a skeleton shell script
-- run the prefered commands
-- reset service
-- make script dynamic
-- maybe add a sleep delay
-- update script to ask upon execution what preferences we want
-- merge version 1 and 2 together
-- add startup params so we can just run the script
+https://github.com/mrfloris/mac/blob/main/screenshots/screencapture-config.sh
 
 ## Resources
 - Apple's support community surely has some existing threads with possible solutions. This page is limited to the settings I generally change when I fresh install a system. 
 - Additionally, this only covers setting some default, and then i use shift+command+4+space, and deal with the screenshot manually. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
 
 ### version
-Last updated: November 14th, 2024 - version 0.1.3, build 006.
+Last updated: November 14th, 2024 - version 0.2.0, build 007.
