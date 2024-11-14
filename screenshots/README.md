@@ -114,4 +114,4 @@ Personally, I think it's nice to have personal preferences. You can use my scrip
 - Additionally, this only covers setting some default, and then i use shift+command+4+space, and deal with the screenshot manually. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
 
 ### version
-Last updated: November 14th, 2024 - version 0.1.2, build 005.
+Last updated: November 14th, 2024 - version 0.1.3, build 006.
