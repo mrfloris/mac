@@ -9,7 +9,7 @@ My current system is an [Apple MacBook Pro M4Max from 2024][macmini-url] with a 
 ## Latest Update
 
 - This repository's latest update is a snapshot of November 14th, 2024.
-- Version 0.2.7, build 030.
+- Version 0.2.8, build 031.
 
 ## How Does This Work?
 
@@ -109,14 +109,8 @@ You can search [this repository][formulae-url] for your favorite casks, formulae
 - I don't use the Dock much. I auto-hide the Dock, and I have it vertically on the left. I use Alfred and Finder to do most things. It's also recommended to just remove the tools you really won't be using daily. And to start dragging some opened tools that you do use daily into the Dock. 
 
 ## Screenshots
-```
-defaults write com.apple.screencapture type -string "png"
-defaults write com.apple.screencapture disable-shadow -bool false
-defaults write com.apple.screencapture disable-shadow-background -bool true
-defaults write com.apple.screencapture include-background -bool false
-killall SystemUIServer
-```
-### TODO move screenshots to it's own folder, as i will have more and have a script 
+I like my screenshots how I like my coffee, just perfect. So, I've written out the stuff I always end up googling (only to find those pages are all 404), and wrote a little shell script to help me set things up really quickly.
+[macOS screencapture / screenshots docs & shell script](screenshots/])
 
 ## TODO
 
