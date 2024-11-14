@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.4.2, build 013 for macOS 15.1+
+# @Version: 0.4.3, build 014 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -10,20 +10,22 @@
 # @URL: Latest source, wiki, & support: https://github.com/mrfloris/mac/tree/main/screenshots
 
 ### todo
-# - maybe add default theme colors, so we can make things pretty and have a default output() for text?
 # - known issue; user input type could be a mismatch
 
-echo -e "\nWelcome to the macOS screencapture Customizer\n"
+# theme
+B="\033[1m"; Y="\033[33m"; C="\033[36m"; X="\033[91m"; R="\033[0m"; W="\033[97m"
+echo -e "debug: ${B}testB${R} , ${Y}testY${R} , ${C}testC${R} , ${X}testX${R}, ${R}testR, test"
+echo -e "\n${B}${Y}Welcome to the macOS screencapture Customizer${R}\n"
 
 # Function to display help
 show_help() {
-    echo "Usage: screencapture-config.sh [OPTION]"
+    echo -e "${W}Usage: ${B}screencapture-config.sh${R} ${C}[OPTION]${R}"
     echo
     echo "Options:"
-    echo "  -h, --help        Show this help message"
-    echo "  -ask              Ask questions to customize screenshot settings interactively"
-    echo "  -reset            Reset screenshot settings to macOS defaults"
-    echo -e "  -list             Display current screenshot settings without making changes \n"
+    echo -e "  ${C}-h, --help${R}    Show this help message"
+    echo -e "  ${C}-ask${R}          Ask questions to customize screenshot settings interactively"
+    echo -e "  ${C}-reset${R}        Reset screenshot settings to macOS defaults"
+    echo -e "  ${C}-list${R}         Display current screenshot settings without making changes \n"
 }
 
 # Function to reset to default screenshot settings
@@ -198,7 +200,7 @@ case "$1" in
         exit 0 # Ensures the script exits after displaying help
         ;;
     *)
-        echo "Invalid option. Use -h for help, or use -ask to get started."
+        echo -e "${X}Invalid option! ${R}${W}Try: ${C}"$0" -ask${R} to get started."
         exit 1
         ;;
 esac
