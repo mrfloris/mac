@@ -9,7 +9,7 @@ My current system is an [Apple MacBook Pro M4Max from 2024][macmini-url] with a 
 ## Latest Update
 
 - This repository's latest update is a snapshot of November 14th, 2024.
-- Version 0.2.6, build 029.
+- Version 0.2.7, build 030.
 
 ## How Does This Work?
 
@@ -116,6 +116,7 @@ defaults write com.apple.screencapture disable-shadow-background -bool true
 defaults write com.apple.screencapture include-background -bool false
 killall SystemUIServer
 ```
+### TODO move screenshots to it's own folder, as i will have more and have a script 
 
 ## TODO
 
