@@ -110,7 +110,7 @@ You can search [this repository][formulae-url] for your favorite casks, formulae
 
 ## Screenshots
 I like my screenshots how I like my coffee, just perfect. So, I've written out the stuff I always end up googling (only to find those pages are all 404), and wrote a little shell script to help me set things up really quickly.
-[macOS screencapture / screenshots docs & shell script](screenshots])
+[macOS screencapture / screenshots docs & shell script](screenshots/)
 
 ## TODO
 
