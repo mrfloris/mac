@@ -11,24 +11,82 @@ macOS screenshot tips and tricks, for 15.1 and newer, tested on Apple Silicon M1
 These commands allow you to modify the default settings for screenshots, making them easier to manage and improving productivity. Or, scroll down and use the shell script!
 
 ## 1. Change Screenshot Save Location
+By default, screenshots save to the desktop. Change this to another folder:
+```bash
+defaults write com.apple.screencapture location -string "~/Desktop/Screenshots"
+```
+Replace `~/Desktop/Screenshots` with the desired path. (Reset to default with `~/Desktop`)
 
 ## 2. Remove Shadows from Window Screenshots
+Shadows around windows add context but can look weird. You can disable them:
+```bash
+defaults write com.apple.screencapture disable-shadow -bool true
+```
+Or make sure they're enabled:
+```bash
+defaults write com.apple.screencapture disable-shadow -bool false
+```
 
 ## 3. Customize the Screenshot File Name Prefix
+Modify the prefix of the screenshot files:
+```bash
+defaults write com.apple.screencapture name "screenshot-"
+```
+Replace `"screenshot-"` with the text you’d like.
 
 ## 4. Disable Screenshot Thumbnails (for Faster Captures)
+To turn off the annoying floating thumbnail:
+```bash
+defaults write com.apple.screencapture show-thumbnail -bool false
+```
+Re-enable screenshot thumbnails again with:
+```bash
+defaults write com.apple.screencapture show-thumbnail -bool true
+```
 
 ## 5. Change Screenshot File Format
+By default, screenshots are PNG files. You can change to a different format (e.g., JPG, TIFF):
+```bash
+defaults write com.apple.screencapture type -string "png"
+```
+Supported formats include `jpg`, `png`, `pdf`, `tiff`, and `gif`. I prefer PNG, despite the filesize, because it allows me to capture full windows, with shadows and transparant backgrounds.
 
 ## 6. Add a Custom Capture Delay
+Add a delay (in seconds) to screenshots:
+```bash
+defaults write com.apple.screencapture delay -int 5
+```
+Change `5` to any desired delay in seconds. I set it low, because it's so annoying that you have to wait for anything.
 
 ## 7. Capture the Mouse Cursor in Screenshots
+To include the mouse cursor in screenshots:
+```bash
+defaults write com.apple.screencapture include-cursor -bool true
+```
+To exclude the cursor like I always do, set it to `false`:
+```bash
+defaults write com.apple.screencapture include-cursor -bool false
+```
 
 ## 8. Make Backgrounds Transparent for Shadows
+Ensure transparency behind window shadows, because otherwise it just looks terrible
+```bash
+defaults write com.apple.screencapture disable-shadow-background -bool true
+```
 
 ## 9. Restart SystemUIServer
+After you're done running the commands to your liking, don't forget to restart the serivce, you can do so by typing this:
+```bash
+killall SystemUIServer
+```
+Or just run the sh script!
 
 ## 10. Reset All Screenshot Settings to Default
+If you want to revert to macOS's default screenshot settings:
+```bash
+defaults delete com.apple.screencapture
+```
+Or run the shell script with the `-reset` parameter.
 
 # Shell script
 
@@ -45,4 +103,4 @@ Personally, I think it's nice to have personal preferences. You can use my scrip
 - add startup params so we can just run the script
 
 ### version
-Last updated: November 14th, 2024 - version 0.0.2, build 002.
+Last updated: November 14th, 2024 - version 0.1.0, build 003.
