@@ -1,6 +1,6 @@
 #!/bin/bash
 # @Filename: screencapture-config.sh
-# @Version: 0.4.1, build 011 for macOS 15.1+
+# @Version: 0.4.2, build 013 for macOS 15.1+
 # @Release: November 14th, 2024
 # @Description: Helps me quickly set some screencapture defaults on a new machine
 # @Contact: I am @floris on Twitter, and mrfloris on gmail.
@@ -11,7 +11,6 @@
 
 ### todo
 # - maybe add default theme colors, so we can make things pretty and have a default output() for text?
-# - known issue; if you set a path that doesn't exist, it wont error, it will take the screenshot - but fails and puts it on the default ~/Desktop (so i might want to do a dir check or something)
 # - known issue; user input type could be a mismatch
 
 echo -e "\nWelcome to the macOS screencapture Customizer\n"
@@ -73,9 +72,21 @@ prompt_user() {
         fi
     fi
 
-    # File Format
-    read -p "Choose the file format (png, jpg, pdf, tiff, gif) [default: png]: " file_format
-    file_format=${file_format:-"png"}
+    # File Format (with validation)
+    valid_formats=("png" "jpg" "pdf" "tiff" "gif")
+    valid_formats_str=$(IFS=", "; echo "${valid_formats[*]}")  # Join the formats into a comma-separated string
+
+    while true; do
+        read -p "Choose the file format ($valid_formats_str) [default: png]: " file_format
+        file_format=${file_format:-"png"}  # Default to png if no input
+        
+        # Check if the input is valid
+        if [[ " ${valid_formats[@]} " =~ " ${file_format} " ]]; then
+            break  # Exit loop if input is valid
+        else
+            echo "Invalid format. Please choose one of: $valid_formats_str."
+        fi
+    done
 
     # Screenshot Base Name
     read -p "Enter the preferred base name for screenshots (default: screenshot-): " base_name

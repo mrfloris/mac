@@ -112,4 +112,4 @@ https://github.com/mrfloris/mac/blob/main/screenshots/screencapture-config.sh
 - Additionally, this only covers setting some default, and then i use shift+command+4+space, and deal with the screenshot manually. You can also go and run the screencapture command manually with a bunch of paramters each time you want to do a certain thing (that's out of scope for this github repo) https://ss64.com/mac/screencapture.html
 
 ### version
-Last updated: November 14th, 2024 - version 0.2.1, build 008.
+Last updated: November 14th, 2024 - version 1.0.0, build 009.
