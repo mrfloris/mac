@@ -8,8 +8,8 @@ My current system is an [Apple MacBook Pro M4Max from 2024][macmini-url] with a 
 
 ## Latest Update
 
-- This repository's latest update is a snapshot of November 12th, 2024.
-- Version 0.2.5, build 028.
+- This repository's latest update is a snapshot of November 14th, 2024.
+- Version 0.2.6, build 029.
 
 ## How Does This Work?
 
@@ -108,6 +108,15 @@ You can search [this repository][formulae-url] for your favorite casks, formulae
 
 - I don't use the Dock much. I auto-hide the Dock, and I have it vertically on the left. I use Alfred and Finder to do most things. It's also recommended to just remove the tools you really won't be using daily. And to start dragging some opened tools that you do use daily into the Dock. 
 
+## Screenshots
+```
+defaults write com.apple.screencapture type -string "png"
+defaults write com.apple.screencapture disable-shadow -bool false
+defaults write com.apple.screencapture disable-shadow-background -bool true
+defaults write com.apple.screencapture include-background -bool false
+killall SystemUIServer
+```
+
 ## TODO
 
 - nodejs
@@ -171,11 +180,6 @@ I will have to review all this ^ when I have time. but now I at least have this.
 
 - TODO: sort the apps list from high to lower priority (defn, using daily, vs, not super needed)
 - TODO: maybe check if some apps can be brew installed, I never checked, update: the456 checked, see above)
-
-- TODO: github stuff so sublime merge works
-- TODO: omz https://github.com/ohmyzsh/ohmyzsh/wiki
-- TODO: p10k `brew install powerlevel10k` https://github.com/romkatv/powerlevel10k
-- todo : java22 https://jdk.java.net/archive/
 
 ---
 
