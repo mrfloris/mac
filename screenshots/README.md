@@ -2,17 +2,33 @@
 
 I like things a certain way, and this helps me make sure that I understand what is possible, and how I want it. And this way I can have the same set-up on each mac system that I have.
 
-**Note:** If you make any changes, restart the service and if you regret your changes you can reset to default again too.
+**Note:** If you make any changes, restart the service (#9) and if you regret your changes you can reset to default again too (#10).
 
-- todo: add an entry for restart service, and reset to system defaults
-
-## Manual screenshot settings (explained)
+# Manual screenshot settings (explained)
 
 macOS screenshot tips and tricks, for 15.1 and newer, tested on Apple Silicon M1, M2Pro, M4Pro, M4Max.
 
 These commands allow you to modify the default settings for screenshots, making them easier to manage and improving productivity. Or, scroll down and use the shell script!
 
-- todo: logic; figure out which handful of commands i usually run, their valid values for 15.1, and test them one by one, build up the shell script to include them one by one.
+## 1. Change Screenshot Save Location
+
+## 2. Remove Shadows from Window Screenshots
+
+## 3. Customize the Screenshot File Name Prefix
+
+## 4. Disable Screenshot Thumbnails (for Faster Captures)
+
+## 5. Change Screenshot File Format
+
+## 6. Add a Custom Capture Delay
+
+## 7. Capture the Mouse Cursor in Screenshots
+
+## 8. Make Backgrounds Transparent for Shadows
+
+## 9. Restart SystemUIServer
+
+## 10. Reset All Screenshot Settings to Default
 
 # Shell script
 
@@ -29,4 +45,4 @@ Personally, I think it's nice to have personal preferences. You can use my scrip
 - add startup params so we can just run the script
 
 ### version
-Last updated: November 14th, 2024 - version 0.0.1, build 001.
+Last updated: November 14th, 2024 - version 0.0.2, build 002.
